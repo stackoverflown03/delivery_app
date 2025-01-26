@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/pages/screen1.dart';
 import 'package:food_delivery/pages/screen3.dart';
+import 'package:food_delivery/pages/screen4.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,10 +15,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        leading: IconButton(onPressed: (){},
+        leading: IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>OnBoardingScreen()));
+        },
             icon: Icon(Icons.arrow_back_ios,)),
         actions: [
-          IconButton(onPressed: (){},
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+          },
               icon: Icon(Icons.shopping_cart_outlined)),
           IconButton(onPressed: (){}, icon: Icon(Icons.search))
         ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/pages/screen2.dart';
+import 'package:food_delivery/pages/login_screen.dart';
 
 
 class OnBoardingScreen extends StatefulWidget {
@@ -42,7 +42,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               textAlign: TextAlign.center,),
               ElevatedButton(onPressed:(){
                 Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> loginScreen()));
               },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange
