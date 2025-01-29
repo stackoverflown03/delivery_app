@@ -43,7 +43,7 @@ class _loginScreenState extends State<loginScreen> {
       if(e.code=="weak-password")
       {status="Weak password";
       }else if(e.code=="email-already-in-use")
-      {loginuser();
+      {status="Email Already in use";
       }else if(e.code=="invalid-email")
       {status="Inavlid Mail";}
     });
@@ -75,7 +75,24 @@ class _loginScreenState extends State<loginScreen> {
       await FirebaseAuth.instance.signOut();
   }
 
-  User? currentuser=FirebaseAuth.instance.currentUser;
+  Future<void> persitence() async{
+      await FirebaseAuth.instance.setPersistence(Persistence.LOCAL);
+  }
+
+  Future<void> auth() async{
+    User? currentuser = FirebaseAuth.instance.currentUser;
+    if(currentuser!=null) {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+    }
+  }
+
+@override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      auth();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -122,10 +139,6 @@ class _loginScreenState extends State<loginScreen> {
                   padding: const EdgeInsets.all(10.0),
                   child: ElevatedButton(onPressed: (){
                     login();
-                    if(currentuser!=null) {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()));
-                    }
                     },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber
@@ -140,6 +153,7 @@ class _loginScreenState extends State<loginScreen> {
                   padding: const EdgeInsets.all(10.0),
                   child: ElevatedButton(onPressed: (){
                     logout();
+                    persitence();
                   },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.amber
@@ -152,7 +166,6 @@ class _loginScreenState extends State<loginScreen> {
               ],
             ),
             Text("$status"),
-
           ],
         ),
       ),

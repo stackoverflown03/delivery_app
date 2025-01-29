@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/pages/login_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:food_delivery/pages/screen2.dart';
 
 
 class OnBoardingScreen extends StatefulWidget {
