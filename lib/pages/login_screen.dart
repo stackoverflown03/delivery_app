@@ -43,7 +43,8 @@ class _loginScreenState extends State<loginScreen> {
       if(e.code=="weak-password")
       {status="Weak password";
       }else if(e.code=="email-already-in-use")
-      {status="Email Already in use";
+      {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
       }else if(e.code=="invalid-email")
       {status="Inavlid Mail";}
     });

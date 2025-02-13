@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Product_Details.dart';
+import 'package:food_delivery/pages/screen2.dart';
 import 'package:food_delivery/pages/screen3.dart';
 
 class OrderPage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _OrderPageState extends State<OrderPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: (){
-          Navigator.push(context,MaterialPageRoute(builder: (context)=>DetailScreen()));
+          Navigator.push(context,MaterialPageRoute(builder: (context)=>HomeScreen()));
         }, icon: Icon(Icons.arrow_back_ios)),
         centerTitle: true,
         title: Text("Product Details"),
