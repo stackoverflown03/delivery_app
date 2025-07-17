@@ -1,0 +1,2 @@
+/Users/pavithras/Development/food_delivery/android/app/.cxx/Debug/1b2w5m55/x86_64/CMakeFiles/edit_cache.dir
+/Users/pavithras/Development/food_delivery/android/app/.cxx/Debug/1b2w5m55/x86_64/CMakeFiles/rebuild_cache.dir
