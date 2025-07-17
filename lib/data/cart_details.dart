@@ -1,4 +1,4 @@
-import 'package:food_delivery/pages/data/product_details.dart';
+import 'package:food_delivery/data/product_details.dart';
 
 class CartItem {
   final ProductDetails product;

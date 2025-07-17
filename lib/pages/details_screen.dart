@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_delivery/pages/data/cart_details.dart';
 import 'package:food_delivery/pages/home_screen.dart';
 import 'package:food_delivery/pages/loading_cubit.dart';
 import 'package:food_delivery/pages/order_screen.dart';
-import 'package:food_delivery/pages/data/product_details.dart';
+
+import '../data/cart_details.dart';
+import '../data/product_details.dart';
 
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key});

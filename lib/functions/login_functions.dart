@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/pages/home_screen.dart';
-import '../loading_cubit.dart';
-import '../login_screen.dart';
+import '../pages/loading_cubit.dart';
+import '../pages/login_screen.dart';
 
 class LoginFunctions {
   final LoadingCubit overLay;

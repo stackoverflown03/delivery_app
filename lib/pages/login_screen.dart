@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_delivery/pages/loading_cubit.dart';
-
-
-import 'functions/login_functions.dart';
+import '../functions/login_functions.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

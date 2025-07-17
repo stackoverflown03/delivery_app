@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_delivery/pages/data/cart_details.dart';
 import 'package:food_delivery/pages/details_screen.dart';
 import 'package:food_delivery/pages/loading_cubit.dart';
+
+import '../data/cart_details.dart';
 
 class OrderPage extends StatefulWidget {
   OrderPage({super.key});
